@@ -8,10 +8,7 @@ public class AppConfig {
 
     @Bean(name = "speakerService")
     public SpeakerService getSpeakerService() {
-        SpeakerService service = new SpeakerService();
-        service.setRepository(getSpeakerRepository());
-
-        return service;
+        return new SpeakerService(getSpeakerRepository());
     }
 
     @Bean(name = "speakerRepository")
