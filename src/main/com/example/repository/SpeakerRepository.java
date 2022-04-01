@@ -1,10 +1,12 @@
 package com.example.repository;
 
 import com.example.model.Speaker;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("speakerRepository")
 public class SpeakerRepository implements ISpeakerRepository {
     @Override
     public List<Speaker> findAll() {
