@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
 
     @Bean(name = "speakerService")
-    @Scope(value = BeanDefinition.SCOPE_SINGLETON) // by default without this but here explicitly
+    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE) // guaranteed unique per request opposite of singletone
     public SpeakerService getSpeakerService() {
         return new SpeakerService(getSpeakerRepository());
     }
