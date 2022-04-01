@@ -15,6 +15,7 @@ public class SpeakerService implements ISpeakerService {
         System.out.println("no constructor");
     }
 
+    @Autowired
     public SpeakerService(SpeakerRepository repository) {
         System.out.println("constructor injection");
         this.repository = repository;
@@ -24,7 +25,6 @@ public class SpeakerService implements ISpeakerService {
         return repository.findAll();
     }
 
-    @Autowired
     public void setSpeakerRepository(SpeakerRepository repository) {
         System.out.println("setter injection");
         this.repository = repository;
