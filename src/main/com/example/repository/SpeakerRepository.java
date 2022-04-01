@@ -10,10 +10,15 @@ public class SpeakerRepository implements ISpeakerRepository {
     public List<Speaker> findAll() {
         List<Speaker> speakers = new ArrayList<>();
 
-        Speaker speaker = new Speaker();
-        speaker.setFirstName("Frua");
-        speaker.setLastName("dela-Rosa");
-        speakers.add(speaker);
+        Speaker frua = new Speaker();
+        frua.setFirstName("Frua");
+        frua.setLastName("dela-Rosa");
+        speakers.add(frua);
+
+        Speaker luke = new Speaker();
+        luke.setFirstName("Luke");
+        luke.setLastName("dela-Rosa");
+        speakers.add(luke);
 
         return speakers;
     }
