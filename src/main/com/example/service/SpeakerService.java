@@ -5,6 +5,7 @@ import com.example.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
@@ -28,5 +29,13 @@ public class SpeakerService implements ISpeakerService {
     public void setSpeakerRepository(SpeakerRepository repository) {
         System.out.println("setter injection");
         this.repository = repository;
+    }
+
+    /**
+     * PostConstruct not for database concerns
+     */
+    @PostConstruct
+    private void initialize() {
+        System.out.println("called after constructor");
     }
 }
