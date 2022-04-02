@@ -6,9 +6,17 @@ import com.example.repository.SpeakerRepository;
 import java.util.List;
 
 public class SpeakerService {
-    SpeakerRepository repository = new SpeakerRepository();
+    private SpeakerRepository speakerRepository;
+
+    public SpeakerService(SpeakerRepository speakerRepository) {
+        this.speakerRepository = speakerRepository;
+    }
+
+    public void setSpeakerRepository(SpeakerRepository speakerRepository) {
+        this.speakerRepository = speakerRepository;
+    }
 
     public List<Speaker> findAll() {
-        return repository.findAll();
+        return speakerRepository.findAll();
     }
 }
