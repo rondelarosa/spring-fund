@@ -11,7 +11,10 @@ public class Application {
 
         System.out.println("Speakers: ".concat(String.valueOf(service.findAll().size())));
         System.out.println("Speaker: ".concat(service.findAll().get(0).getFirstName()));
+        System.out.println("Seed num: ".concat(String.valueOf(service.findAll().get(0).getSeedNum())));
+
         System.out.println("Speaker: ".concat(service.findAll().get(1).getFirstName()));
+        System.out.println("Seed num: ".concat(String.valueOf(service.findAll().get(1).getSeedNum())));
 
         SpeakerService service2 = appContext.getBean("speakerService", SpeakerService.class);
 
