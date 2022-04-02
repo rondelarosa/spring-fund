@@ -8,6 +8,9 @@ import java.util.List;
 public class SpeakerService {
     private SpeakerRepository speakerRepository;
 
+    public SpeakerService() {
+    }
+
     public SpeakerService(SpeakerRepository speakerRepository) {
         this.speakerRepository = speakerRepository;
     }
