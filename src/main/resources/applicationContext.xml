@@ -7,7 +7,7 @@
     <!-- bean definitions here -->
     <bean name="speakerRepository" class="com.example.repository.SpeakerRepository"/>
 
-    <bean name="speakerService" class="com.example.service.SpeakerService">
-        <constructor-arg index="0" ref="speakerRepository"/>
+    <bean name="speakerService" class="com.example.service.SpeakerService" autowire="constructor">
+<!--        <constructor-arg index="0" ref="speakerRepository"/>-->
     </bean>
 </beans>
